@@ -78,7 +78,7 @@ export const Home = () => {
               className="text-2xl md:text-5xl font-bold uppercase text-white mb-4 text-shadow-premium text-center flex flex-col items-center gap-2"
             >
               <span>MARTUAM</span>
-              <span>CORP</span>
+              <span className="text-lg md:text-3xl tracking-[0.6em]">CORP</span>
             </motion.h1>
             
             <motion.div 

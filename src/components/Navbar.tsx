@@ -12,7 +12,7 @@ export const Navbar = () => {
       <div className="flex items-center h-full">
         <Link to="/" className="flex items-center gap-3">
           <LogoEmblem className="h-5 md:h-7 w-auto" />
-          <span className="text-white font-display font-bold text-xs md:text-base tracking-[0.3em] mt-1">MARTUAM</span>
+          <span className="hidden md:block text-white font-display font-bold text-xs md:text-base tracking-[0.3em] mt-1">MARTUAM</span>
         </Link>
       </div>
       

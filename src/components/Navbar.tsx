@@ -9,10 +9,10 @@ export const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-0 flex justify-between items-center bg-martuam-navy/40 backdrop-blur-md border-b border-white/5 h-12 md:h-16">
-      <div className="flex items-center h-full">
-        <Link to="/" className="flex items-center gap-2 md:gap-3">
-          <LogoEmblem className="h-5 md:h-7 w-auto" />
-          <span className="text-white font-display font-bold text-[10px] md:text-base tracking-[0.2em] md:tracking-[0.3em] mt-1">MARTUAM</span>
+      <div className="hidden md:flex items-center h-full">
+        <Link to="/" className="flex items-center gap-3">
+          <LogoEmblem className="h-7 w-auto" />
+          <span className="text-white font-display font-bold text-base tracking-[0.3em] mt-1">MARTUAM</span>
         </Link>
       </div>
       
@@ -26,7 +26,7 @@ export const Navbar = () => {
       </div>
 
       {/* Mobile Toggle */}
-      <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+      <button className="md:hidden text-white ml-auto" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 

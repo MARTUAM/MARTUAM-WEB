@@ -51,7 +51,7 @@ export const Home = () => {
             duration: 1.2, 
             ease: [0.22, 1, 0.36, 1] 
           }}
-          className="relative z-10 w-full max-w-5xl -mt-8"
+          className="relative z-10 w-full max-w-5xl mt-4"
         >
           {/* Main Content */}
           <div className="flex flex-col items-center will-change-transform">
@@ -64,7 +64,7 @@ export const Home = () => {
                 ease: [0.22, 1, 0.36, 1] 
               }}
             >
-              <LogoEmblem className="w-28 md:w-40 aspect-[465/507] mb-4 drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)]" />
+              <LogoEmblem className="w-36 md:w-56 aspect-[465/507] mb-6 drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)]" />
             </motion.div>
             
             <motion.h1 
@@ -75,10 +75,9 @@ export const Home = () => {
                 duration: 1.5, 
                 ease: [0.22, 1, 0.36, 1] 
               }}
-              className="text-2xl md:text-5xl font-bold uppercase text-white mb-4 text-shadow-premium text-center flex flex-col items-center gap-2"
+              className="text-2xl md:text-5xl font-bold uppercase text-white mb-4 text-shadow-premium text-center"
             >
               <span>MARTUAM</span>
-              <span className="text-lg md:text-3xl tracking-[0.6em]">CORP</span>
             </motion.h1>
             
             <motion.div 

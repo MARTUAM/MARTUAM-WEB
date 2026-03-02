@@ -42,7 +42,7 @@
 }
 
 .gold-button-premium {
-  @apply relative overflow-hidden border border-martuam-gold/40 text-martuam-offwhite px-10 py-3 uppercase tracking-[0.3em] text-[11px] font-bold transition-all duration-500 shadow-lg;
+  @apply relative overflow-hidden border border-martuam-gold/40 text-martuam-offwhite px-10 py-3 uppercase tracking-[0.3em] text-[11px] font-bold transition-all duration-500 shadow-lg rounded-full;
   background: linear-gradient(to bottom, #C6A85E 0%, #8C733E 100%);
 }
 

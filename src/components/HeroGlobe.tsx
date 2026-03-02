@@ -2,8 +2,13 @@ import { useEffect, useRef } from "react";
 import createGlobe from "cobe";
 import { motion } from "motion/react";
 
-export const HeroGlobe = () => {
+interface HeroGlobeProps {
+  theme?: "dark" | "light";
+}
+
+export const HeroGlobe = ({ theme = "dark" }: HeroGlobeProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const isDark = theme === "dark";
 
   useEffect(() => {
     let phi = 0;
@@ -19,19 +24,21 @@ export const HeroGlobe = () => {
 
     const dpr = window.devicePixelRatio ? Math.min(window.devicePixelRatio, 2) : 2;
 
-    const globe = createGlobe(canvasRef.current!, {
+    if (!canvasRef.current) return;
+
+    const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: dpr,
       width: width * dpr,
       height: width * dpr,
       phi: 0,
       theta: 0.3,
-      dark: 1,
-      diffuse: 1.2,
-      mapSamples: 8000,
-      mapBrightness: 22,
-      baseColor: [0.01, 0.02, 0.05],
+      dark: isDark ? 1 : 0,
+      diffuse: isDark ? 2 : 1.2,
+      mapSamples: 12000,
+      mapBrightness: isDark ? 40 : 15,
+      baseColor: isDark ? [0.1, 0.2, 0.5] : [0.77, 0.66, 0.37], // Blue for dark, Gold for light
       markerColor: [1, 0.85, 0.5],
-      glowColor: [0.02, 0.05, 0.15],
+      glowColor: isDark ? [0.1, 0.3, 0.7] : [0.9, 0.8, 0.5], // Blue for dark, Gold for light
       markers: [
         { location: [40.7128, -74.0060], size: 0.04 }, // NY
         { location: [51.5074, -0.1278], size: 0.04 }, // London
@@ -63,7 +70,7 @@ export const HeroGlobe = () => {
       window.removeEventListener('resize', onResize);
       resizeObserver.disconnect();
     };
-  }, []);
+  }, [theme]);
 
   return (
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-40 md:opacity-50 mix-blend-screen -translate-y-16 md:translate-y-6">

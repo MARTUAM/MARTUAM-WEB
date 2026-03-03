@@ -17,17 +17,17 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
   return (
     <>
-      <nav className={`hidden md:flex fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-0 justify-between items-center backdrop-blur-md border-b h-12 md:h-16 transition-all duration-500 ${
+      <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-0 flex justify-between items-center backdrop-blur-md border-b h-16 transition-all duration-500 ${
         isDark 
           ? "bg-martuam-navy/40 border-white/5" 
           : "bg-white border-slate-200"
       }`}>
-        <div className="hidden md:flex items-center h-full">
+        <div className="flex items-center h-full">
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src="/logo-horizontal-blanco.svg" 
               alt="MARTUAM" 
-              className={`h-8 lg:h-10 w-auto group-hover:scale-105 transition-transform ${!isDark ? "invert" : ""}`} 
+              className={`h-6 md:h-8 lg:h-10 w-auto group-hover:scale-105 transition-transform ${!isDark ? "invert" : ""}`} 
             />
           </Link>
         </div>

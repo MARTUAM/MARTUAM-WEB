@@ -31,7 +31,7 @@ export const Home = ({ theme }: HomeProps) => {
         <div className="premium-texture" />
         
         {/* Background Globe - Positioned slightly more left than before */}
-        <div className={`absolute right-[-10%] md:right-[-5%] top-1/2 -translate-y-1/2 w-[70%] h-[90%] z-0 transition-all duration-700 ${
+        <div className={`absolute right-[-10%] md:right-[-5%] top-[60%] md:top-1/2 -translate-y-1/2 w-[70%] h-[90%] z-0 transition-all duration-700 ${
           isDark ? "opacity-50 md:opacity-100" : "opacity-20 md:opacity-40"
         }`}>
           <div key={theme} className="w-full h-full">
@@ -47,11 +47,6 @@ export const Home = ({ theme }: HomeProps) => {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <img 
-                src="/logo-horizontal-blanco.svg" 
-                alt="MARTUAM" 
-                className={`h-10 w-auto mb-8 md:hidden ${!isDark ? "invert" : ""}`} 
-              />
               <div className={`inline-flex items-center gap-3 px-4 py-1.5 rounded-full border mb-6 transition-colors ${
                 isDark ? "border-martuam-gold/20 bg-martuam-gold/5" : "border-martuam-gold/40 bg-martuam-gold/10"
               }`}>

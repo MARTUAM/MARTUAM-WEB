@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { HeroGlobe } from "../components/HeroGlobe";
-import { LogoEmblem } from "../components/LogoEmblem";
 import { Shield, Cpu, Globe, Server, Terminal, ArrowRight, ExternalLink, Lock, Zap, Database, BarChart3, Activity, ShieldCheck, Wifi } from "lucide-react";
 import { useState, useEffect } from "react";
 import { LoginModal } from "../components/LoginModal";
@@ -48,6 +47,11 @@ export const Home = ({ theme }: HomeProps) => {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
+              <img 
+                src="/logo-horizontal-blanco.svg" 
+                alt="MARTUAM" 
+                className={`h-10 w-auto mb-8 md:hidden ${!isDark ? "invert" : ""}`} 
+              />
               <div className={`inline-flex items-center gap-3 px-4 py-1.5 rounded-full border mb-6 transition-colors ${
                 isDark ? "border-martuam-gold/20 bg-martuam-gold/5" : "border-martuam-gold/40 bg-martuam-gold/10"
               }`}>
@@ -81,17 +85,6 @@ export const Home = ({ theme }: HomeProps) => {
                   <Lock size={14} />
                   <span>EXECUTIVE ACCESS</span>
                 </button>
-                <Link 
-                  to="/portfolio"
-                  className={`px-10 py-4 text-[10px] tracking-[0.3em] font-bold border transition-all duration-300 flex items-center gap-3 hover:scale-105 active:scale-95 rounded-full ${
-                    isDark 
-                      ? "text-white border-white/10 hover:bg-white/5" 
-                      : "text-slate-900 border-slate-200 hover:bg-slate-100"
-                  }`}
-                >
-                  <span>VIEW PORTFOLIO</span>
-                  <ArrowRight size={14} />
-                </Link>
               </div>
             </motion.div>
           </div>
@@ -273,22 +266,22 @@ export const Home = ({ theme }: HomeProps) => {
                   <div className="grid grid-cols-2 gap-8">
                     <div className="space-y-4">
                       <Zap className="text-martuam-gold w-10 h-10" />
-                      <h4 className={`font-bold text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>0.4ms</h4>
+                      <h4 className={`font-bold text-2xl sm:text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>Real-Time</h4>
                       <p className={`text-[10px] uppercase tracking-widest transition-colors ${isDark ? "text-white/30" : "text-slate-400"}`}>Decision Latency</p>
                     </div>
                     <div className="space-y-4">
                       <Database className="text-martuam-gold w-10 h-10" />
-                      <h4 className={`font-bold text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>12.4PB</h4>
+                      <h4 className={`font-bold text-2xl sm:text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>Global</h4>
                       <p className={`text-[10px] uppercase tracking-widest transition-colors ${isDark ? "text-white/30" : "text-slate-400"}`}>Encrypted Assets</p>
                     </div>
                     <div className="space-y-4">
                       <BarChart3 className="text-martuam-gold w-10 h-10" />
-                      <h4 className={`font-bold text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>100%</h4>
+                      <h4 className={`font-bold text-2xl sm:text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>Absolute</h4>
                       <p className={`text-[10px] uppercase tracking-widest transition-colors ${isDark ? "text-white/30" : "text-slate-400"}`}>Uptime Sovereignty</p>
                     </div>
                     <div className="space-y-4">
                       <Shield className="text-martuam-gold w-10 h-10" />
-                      <h4 className={`font-bold text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>AES-256</h4>
+                      <h4 className={`font-bold text-2xl sm:text-3xl transition-colors ${isDark ? "text-white" : "text-slate-900"}`}>Military</h4>
                       <p className={`text-[10px] uppercase tracking-widest transition-colors ${isDark ? "text-white/30" : "text-slate-400"}`}>Core Protocol</p>
                     </div>
                   </div>
@@ -321,10 +314,11 @@ export const Home = ({ theme }: HomeProps) => {
       }`}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="flex items-center gap-2 group cursor-pointer">
-            <LogoEmblem theme={theme} className="h-12 w-auto transition-transform duration-500 group-hover:scale-110" />
-            <span className={`font-display font-bold text-2xl tracking-[0.3em] mt-1 transition-colors ${
-              isDark ? "text-white" : "text-slate-900"
-            }`}>MARTUAM</span>
+            <img 
+              src="/logo-horizontal-blanco.svg" 
+              alt="MARTUAM" 
+              className={`h-8 w-auto transition-transform duration-500 group-hover:scale-105 ${!isDark ? "invert" : ""}`} 
+            />
           </div>
           
           <div className="flex items-center gap-8 text-[10px] font-bold tracking-[0.2em] uppercase transition-colors">

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Menu, X, ArrowRight, Lock, Sun, Moon } from "lucide-react";
-import { LogoEmblem } from "./LogoEmblem";
 import { Link } from "react-router-dom";
 import { LoginModal } from "./LoginModal";
 
@@ -18,26 +17,23 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-0 flex justify-between items-center backdrop-blur-md border-b h-12 md:h-16 transition-all duration-500 ${
+      <nav className={`hidden md:flex fixed top-0 left-0 w-full z-50 px-4 md:px-6 py-0 justify-between items-center backdrop-blur-md border-b h-12 md:h-16 transition-all duration-500 ${
         isDark 
           ? "bg-martuam-navy/40 border-white/5" 
           : "bg-white border-slate-200"
       }`}>
         <div className="hidden md:flex items-center h-full">
           <Link to="/" className="flex items-center gap-3 group">
-            <LogoEmblem theme={theme} className="h-12 w-auto group-hover:scale-110 transition-transform" />
-            <span className={`font-display font-bold text-xl tracking-[0.3em] mt-1 transition-colors ${
-              isDark ? "text-white" : "text-slate-900"
-            }`}>MARTUAM</span>
+            <img 
+              src="/logo-horizontal-blanco.svg" 
+              alt="MARTUAM" 
+              className={`h-8 lg:h-10 w-auto group-hover:scale-105 transition-transform ${!isDark ? "invert" : ""}`} 
+            />
           </Link>
         </div>
         
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-[9px] font-bold tracking-[0.25em] uppercase">
-          <Link to="/portfolio" className={`transition-colors ${
-            isDark ? "text-white/80 hover:text-martuam-gold" : "text-slate-600 hover:text-martuam-gold"
-          }`}>Portfolio</Link>
-          
           <button 
             onClick={toggleTheme}
             className={`p-2 rounded-full transition-all duration-300 ${
@@ -82,12 +78,12 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
             }`}
           >
             <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3 mb-4 group">
-              <LogoEmblem theme={theme} className="h-10 w-auto" />
-              <span className={`font-display font-bold text-lg tracking-[0.3em] mt-1 transition-colors ${
-                isDark ? "text-white" : "text-slate-900"
-              }`}>MARTUAM</span>
+              <img 
+                src="/logo-horizontal-blanco.svg" 
+                alt="MARTUAM" 
+                className={`h-6 w-auto ${!isDark ? "invert" : ""}`} 
+              />
             </Link>
-            <Link to="/portfolio" onClick={() => setIsOpen(false)}>Portfolio</Link>
             <button 
               onClick={() => {
                 setIsOpen(false);

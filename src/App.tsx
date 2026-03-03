@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
-import { Portfolio } from "./pages/Portfolio";
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -24,7 +23,6 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home theme={theme} />} />
-          <Route path="/portfolio" element={<Portfolio theme={theme} />} />
         </Routes>
       </div>
     </Router>

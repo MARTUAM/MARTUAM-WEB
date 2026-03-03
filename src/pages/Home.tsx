@@ -25,7 +25,7 @@ export const Home = ({ theme }: HomeProps) => {
   return (
     <main className={`transition-colors duration-500 ${isDark ? "bg-martuam-navy" : "bg-slate-50"}`}>
       {/* Hero Section */}
-      <section className={`relative min-h-screen flex items-center overflow-hidden px-6 md:px-12 lg:px-24 transition-colors duration-500 ${
+      <section className={`relative min-h-screen pt-24 md:pt-0 flex items-center overflow-hidden px-6 md:px-12 lg:px-24 transition-colors duration-500 ${
         isDark ? "hero-gradient" : "bg-white"
       }`}>
         <div className="premium-texture" />
@@ -40,7 +40,7 @@ export const Home = ({ theme }: HomeProps) => {
         </div>
 
         <div className="relative z-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col items-center md:items-start mt-20 md:mt-32 text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start mt-0 md:mt-32 text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}

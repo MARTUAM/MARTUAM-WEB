@@ -40,12 +40,12 @@ export const Home = ({ theme }: HomeProps) => {
         </div>
 
         <div className="relative z-10 w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col items-start mt-20 md:mt-32">
+          <div className="flex flex-col items-center md:items-start mt-20 md:mt-32 text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="mb-8"
+              className="mb-8 flex flex-col items-center md:items-start"
             >
               <div className={`inline-flex items-center gap-3 px-4 py-1.5 rounded-full border mb-6 transition-colors ${
                 isDark ? "border-martuam-gold/20 bg-martuam-gold/5" : "border-martuam-gold/40 bg-martuam-gold/10"
@@ -58,7 +58,7 @@ export const Home = ({ theme }: HomeProps) => {
                 </span>
               </div>
               
-              <h1 className={`text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1] mb-6 tracking-tight transition-colors ${
+              <h1 className={`text-5xl md:text-5xl lg:text-6xl font-display font-bold leading-[1.1] mb-6 tracking-tight transition-colors ${
                 isDark ? "text-white" : "text-slate-900"
               }`}>
                 Structured.<br />
@@ -72,7 +72,7 @@ export const Home = ({ theme }: HomeProps) => {
                 The entity that structures, controls, and orchestrates all your digital, financial, and corporate operations. The core of your corporate sovereignty.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                 <button 
                   onClick={() => setIsLoginOpen(true)}
                   className="gold-button-premium px-10 py-4 text-[10px] tracking-[0.3em] font-bold flex items-center gap-3 hover:scale-105 active:scale-95 transition-all duration-300 shadow-xl hover:shadow-martuam-gold/30"

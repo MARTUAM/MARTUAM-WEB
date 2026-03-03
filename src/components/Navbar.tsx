@@ -27,7 +27,7 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
             <img 
               src="/logo-horizontal-blanco.svg" 
               alt="MARTUAM" 
-              className={`h-6 md:h-8 lg:h-10 w-auto group-hover:scale-105 transition-transform ${!isDark ? "invert" : ""}`} 
+              className={`h-8 md:h-8 lg:h-10 w-auto group-hover:scale-105 transition-transform ${!isDark ? "invert" : ""}`} 
             />
           </Link>
         </div>
@@ -62,9 +62,6 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
             }`}
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-          <button className={isDark ? "text-white" : "text-slate-900"} onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
